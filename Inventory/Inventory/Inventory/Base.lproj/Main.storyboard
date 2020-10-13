@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EqZ-ma-fTq">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log In View Controller-->
+        <scene sceneID="KId-It-FAz">
+            <objects>
+                <viewController id="dvm-d1-l0B" customClass="LogInViewController" customModule="Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7sX-iq-C0p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaD-nm-1eI">
+                                <rect key="frame" x="98" y="346" width="179" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Press:" destination="dvm-d1-l0B" eventType="touchUpInside" id="l8P-B1-njQ"/>
+                                    <segue destination="hcl-JH-4EC" kind="show" identifier="GoToTabView" id="9Th-aV-php"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CPp-sh-Ep5" customClass="GIDSignInButton">
+                                <rect key="frame" x="67" y="160" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Egb-Vo-yte"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uwc-0M-kO7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iRR-Os-QRP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2900" y="-93.103448275862078"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="wE6-ly-DwA">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hcl-JH-4EC" customClass="TabViewController" customModule="Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e6m-lz-7BO">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BRc-eX-YfL" kind="relationship" relationship="viewControllers" id="Gkd-r4-mok"/>
+                        <segue destination="A7S-PP-PQV" kind="relationship" relationship="viewControllers" id="RRE-bM-abs"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24g-kI-tyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3810.4000000000001" y="-93.103448275862078"/>
+        </scene>
+        <!--Coir-->
+        <scene sceneID="25A-Eo-CWI">
+            <objects>
+                <tableViewController id="BRc-eX-YfL" customClass="CoirTableViewController" customModule="Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1bo-du-XlS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoirCell" id="0Xx-eg-tx8" customClass="CoirTableViewCell" customModule="Inventory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Xx-eg-tx8" id="bHw-bN-z7c">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hg8-9R-qe5" customClass="CoirView" customModule="Inventory" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Hg8-9R-qe5" firstAttribute="top" secondItem="bHw-bN-z7c" secondAttribute="top" id="Bv2-fg-LR2"/>
+                                        <constraint firstItem="Hg8-9R-qe5" firstAttribute="leading" secondItem="bHw-bN-z7c" secondAttribute="leading" id="Eti-iN-im6"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hg8-9R-qe5" secondAttribute="trailing" id="qn9-um-D8b"/>
+                                        <constraint firstAttribute="bottom" secondItem="Hg8-9R-qe5" secondAttribute="bottom" id="tss-DF-5hu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coirView" destination="Hg8-9R-qe5" id="xIN-dO-apW"/>
+                                    <segue destination="wVt-Td-LoS" kind="show" identifier="GoToCoirDetailView" id="QFw-34-gkh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BRc-eX-YfL" id="yEE-D4-PQC"/>
+                            <outlet property="delegate" destination="BRc-eX-YfL" id="r7Z-IM-Btz"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Coir" image="c.circle.fill" catalog="system" id="WCD-qP-3Ve"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0T-8c-9XU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4802.3999999999996" y="-93.103448275862078"/>
+        </scene>
+        <!--Coir Detail Table View Controller-->
+        <scene sceneID="Yu4-Tw-SVN">
+            <objects>
+                <tableViewController id="wVt-Td-LoS" customClass="CoirDetailTableViewController" customModule="Inventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mhm-ma-buU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoirDetailCell" id="B7f-EX-oVo" customClass="CoirDetailTableViewCell" customModule="Inventory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B7f-EX-oVo" id="gIa-i5-nEK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0k-bG-49j" customClass="CoirDetailView" customModule="Inventory" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Z0k-bG-49j" secondAttribute="bottom" id="PSt-yB-XmN"/>
+                                        <constraint firstAttribute="trailing" secondItem="Z0k-bG-49j" secondAttribute="trailing" id="PgI-iA-iaf"/>
+                                        <constraint firstItem="Z0k-bG-49j" firstAttribute="top" secondItem="gIa-i5-nEK" secondAttribute="top" id="S2f-dS-9Yz"/>
+                                        <constraint firstItem="Z0k-bG-49j" firstAttribute="leading" secondItem="gIa-i5-nEK" secondAttribute="leading" id="WH5-Gz-b5Z"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coirDetailView" destination="Z0k-bG-49j" id="FcY-eR-QPR"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="wVt-Td-LoS" id="EKZ-K2-66B"/>
+                            <outlet property="delegate" destination="wVt-Td-LoS" id="Zzn-s6-w9W"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9S4-jm-NSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5812" y="-93"/>
+        </scene>
+        <!--Cloth-->
+        <scene sceneID="n2x-sk-IJ1">
+            <objects>
+                <viewController id="A7S-PP-PQV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vwt-4w-Rf4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLn-JE-fdm" customClass="QuantityView" customModule="Inventory" customModuleProvider="target">
+                                <rect key="frame" x="67" y="300" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="07t-Uc-9rI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cloth" image="k.circle.fill" catalog="system" id="vrw-Gv-97r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDu-Zj-eNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4802" y="639"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R5F-hg-y5n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EqZ-ma-fTq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4MU-ix-aec">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dvm-d1-l0B" kind="relationship" relationship="rootViewController" id="cw2-Vk-Q3h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fC3-N7-KSO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.5999999999999" y="-93.103448275862078"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="c.circle.fill" catalog="system" width="64" height="62"/>
+        <image name="k.circle.fill" catalog="system" width="64" height="62"/>
+    </resources>
+</document>
